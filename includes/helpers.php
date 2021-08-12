@@ -10,9 +10,13 @@
     }
 
     function borrarErrores(){
+        $borrado = false;
         $_SESSION['errores'] = null;
         $_SESSION['completado'] = null;
-        $borrado = session_unset();
+        if(isset($_SESSION['errores']) || isset($_SESSION['completado'])){
+            $borrado = session_unset();
+        }
+        
         return $borrado;
     }
 

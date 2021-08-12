@@ -152,6 +152,7 @@ input[type='password']{
     padding: 5px;
 }
 
+.boton,
 input[type='button'],
 input[type='submit']{
     margin-top: 5px;
@@ -163,6 +164,11 @@ input[type='submit']{
     border: 1px solid #156785;
     cursor: pointer;
     padding: 7px;
+}
+
+.boton{
+    width: 130px;
+    text-align: center;
 }
 
 /* PARTE CENTRAL */

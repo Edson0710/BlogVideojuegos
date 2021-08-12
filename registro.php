@@ -9,10 +9,10 @@
         
         //  Recoger valores
         // mysqli_escape_string($conexion, $_POST['name']);
-        $nombre = isset($_POST['name'])?$_POST['name']:false;
-        $apellidos = isset($_POST['apellidos'])?$_POST['apellidos']:false;
-        $email = isset($_POST['email'])?$_POST['email']:false;
-        $pass = isset($_POST['pass'])?$_POST['pass']:false;
+        $nombre = isset($_POST['name'])?trim($_POST['name']):false;
+        $apellidos = isset($_POST['apellidos'])?trim($_POST['apellidos']):false;
+        $email = isset($_POST['email'])?trim($_POST['email']):false;
+        $pass = isset($_POST['pass'])?trim($_POST['pass']):false;
 
         //  Array de errores
         $errores = array();
