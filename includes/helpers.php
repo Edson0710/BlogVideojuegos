@@ -1,5 +1,4 @@
 <?php 
-
     function mostrarError($errores, $campo){
         $alerta = '';
         if(isset($errores[$campo]) && !empty($campo)){
@@ -18,6 +17,18 @@
         }
         
         return $borrado;
+    }
+
+    function conseguirCategorias($conexion){
+        $sql = "SELECT * FROM categorias ORDER BY id ASC;";
+        $query = mysqli_query($conexion, $sql);
+
+        $result = false;
+        if($query && mysqli_num_rows($query) >= 1){
+            $result = $query;
+        }
+
+        return $result;
     }
 
 ?>
