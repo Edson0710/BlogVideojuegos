@@ -171,6 +171,21 @@ input[type='submit']{
     text-align: center;
 }
 
+.boton_naranja{
+    background: orange;
+    border-color: #bd7d08;
+}
+
+.boton_verde{
+    background: #21b921;
+    border-color: green;
+}
+
+.boton_rojo{
+    background: red;
+    border-color: red;
+}
+
 /* PARTE CENTRAL */
 #principal{
     float: left;
