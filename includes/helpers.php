@@ -12,6 +12,7 @@
         $borrado = false;
         $_SESSION['errores'] = null;
         $_SESSION['completado'] = null;
+        $_SESSION['errores_entrada'] = null;
         if(isset($_SESSION['errores']) || isset($_SESSION['completado'])){
             $borrado = session_unset();
         }

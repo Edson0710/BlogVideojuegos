@@ -12,25 +12,27 @@
 
         //  Validar los datos 
         if(empty($titulo)){
-            $errores['name'] = "El titulo no es válido";
+            $errores['titulo'] = "El titulo no es válido";
         }
         if(empty($descripcion)){
-            $errores['name'] = "La descripcion no es válido";
+            $errores['descripcion'] = "La descripcion no es válida";
         }
         if(empty($categoria) && !is_numeric($categoria)){
-            $errores['name'] = "La categoria no es válido";
+            $errores['categoria'] = "La categoria no es válido";
         }
 
         if(count($errores) == 0){
             echo "Hola";
             $sql = "INSERT INTO entradas VALUES (NULL, $usuario, $categoria, '$titulo', '$descripcion', CURDATE());";
             $query = mysqli_query($conexion, $sql);
+            header("Location: index.php");
         } else{
             $_SESSION["errores_entrada"] = $errores;
+            header("Location: crear-entradas.php");
         }
 
     }
 
-    header("Location: index.php");
+    
 
 ?>
